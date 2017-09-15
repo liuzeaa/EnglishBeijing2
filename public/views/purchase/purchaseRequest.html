@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../../stylesheets/reset.css">
+    <link rel="stylesheet" href="../../stylesheets/purchase.css">
+    <link rel="stylesheet" href="../../javascrips/layui/css/layui.css">
+    <script src="../../javascrips/layui/layui.js"></script>
+    <style>
+        .layui-form-label{width:98px;}
+    </style>
+</head>
+<body>
+<div>
+    <div class="layui-tab layui-tab-card">
+        <ul class="layui-tab-title">
+            <li class="layui-this">采购申请</li>
+        </ul>
+        <div class="layui-tab-content">
+            <div class="layui-tab-item layui-show">
+                <form class="layui-form" action="">
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">采购编号：</label>
+                        <div class="layui-input-inline">
+                            <input type="text" name="title" lay-verify="required" lay-filter="number" autocomplete="off" placeholder="" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">年度：</label>
+                        <div class="layui-input-inline">
+                            <input type="text" name="title" lay-verify="required|number" lay-filter="yearly" autocomplete="off" placeholder="" class="layui-input">
+
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">部门：</label>
+                        <div class="layui-input-inline">
+                            <select name="department" lay-filter="department">
+
+                            </select>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">提报人:</label>
+                        <div class="layui-input-inline">
+                            <input type="text" name="title" lay-verify="required" lay-filter="yearly" autocomplete="off" placeholder="" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">提交日期：</label>
+                        <div class="layui-input-inline">
+                            <input type="text" name="date" id="date" lay-verify="date" placeholder="2017-09-14" autocomplete="off" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <div class="layui-input-block" style="margin-left: 128px">
+                            <button class="layui-btn  layui-btn-normal" lay-submit="" lay-filter="demo1">保存</button>
+                            <button type="reset" class="layui-btn layui-btn-primary">返回</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    layui.use(['form','element','laydate'], function(){
+        var form = layui.form,laydate = layui.laydate,$ = layui.jquery,element = layui.element;
+        //日期
+        laydate.render({
+            elem: '#date'
+        });
+        //监听提交
+        form.on('submit(demo1)', function(data){
+            layer.msg(JSON.stringify(data.field));
+            return false;
+        });
+    });
+</script>
+</body>
+</html>

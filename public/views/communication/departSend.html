@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../../stylesheets/reset.css">
+    <link rel="stylesheet" href="../../stylesheets/communication.css">
+    <link rel="stylesheet" href="../../javascrips/layui/css/layui.css">
+    <script src="../../javascrips/jquery-1.11.2.min.js"></script>
+    <script src="../../javascrips/layui/layui.js"></script>
+    <style>
+        .layui-form-label{width:98px;}
+        .layui-input-block{margin-left: 128px;}
+    </style>
+</head>
+<body>
+<div>
+    <div class="layui-tab layui-tab-card">
+        <ul class="layui-tab-title">
+            <li class="layui-this" id="title">部门邮件群发</li>
+        </ul>
+        <div class="layui-tab-content">
+            <div class="layui-tab-item layui-show">
+                <form class="layui-form" action="">
+                    <div class="layui-form-item">
+                        <div class="layui-inline">
+                            <label class="layui-form-label">登录名：</label>
+                            <div class="layui-input-inline">
+                                <input type="text" name="email" lay-verify="email" autocomplete="off" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-inline">
+                            <label class="layui-form-label">角色：</label>
+                            <div class="layui-input-inline">
+                                <select name="quiz">
+                                    <option value=""></option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <div class="layui-inline">
+                            <label class="layui-form-label">姓名：</label>
+                            <div class="layui-input-inline">
+                                <input type="text" name="email" lay-verify="email" autocomplete="off" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-inline">
+                            <label class="layui-form-label">用户类型：</label>
+                            <div class="layui-input-inline">
+                                <select name="quiz">
+                                    <option value=""></option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="layui-inline">
+                            <div class="layui-input-inline">
+                                <button class="layui-btn layui-btn-normal">查询</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="layui-form-item layui-form-text">
+                        <label class="layui-form-label">已选用户:</label>
+                        <div class="layui-input-block" style="margin-left: 128px;">
+                            <textarea placeholder="" class="layui-textarea" ></textarea>
+                        </div>
+                    </div>
+                    <div class="layui-form-item layui-form-text">
+                        <label class="layui-form-label">可选用户:</label>
+                        <div class="layui-input-block" style="margin-left: 128px;border:1px solid #ccc;padding:0px 10px;">
+                            <input type="checkbox" name="like1[write]" lay-skin="primary" title="徐萍1" checked="">
+                            <input type="checkbox" name="like1[read]" lay-skin="primary" title="徐萍2">
+                            <input type="checkbox" name="like1[game]" lay-skin="primary" title="徐萍3" disabled="">
+                            <input type="checkbox" name="like1[write]" lay-skin="primary" title="徐萍1" checked="">
+                            <input type="checkbox" name="like1[read]" lay-skin="primary" title="徐萍2">
+                            <input type="checkbox" name="like1[game]" lay-skin="primary" title="徐萍3" disabled="">
+                            <input type="checkbox" name="like1[write]" lay-skin="primary" title="徐萍1" checked="">
+                            <input type="checkbox" name="like1[read]" lay-skin="primary" title="徐萍2">
+                            <input type="checkbox" name="like1[game]" lay-skin="primary" title="徐萍3" disabled="">
+                            <input type="checkbox" name="like1[write]" lay-skin="primary" title="徐萍1" checked="">
+                            <input type="checkbox" name="like1[read]" lay-skin="primary" title="徐萍2">
+                            <input type="checkbox" name="like1[game]" lay-skin="primary" title="徐萍3" disabled="">
+                        </div>
+                    </div>
+                    <div class="layui-form-item layui-form-text">
+                        <label class="layui-form-label">内容</label>
+                        <div class="layui-input-block" style="margin-left: 128px;">
+                            <textarea class="layui-textarea layui-hide" name="content" lay-verify="content" id="LAY_demo_editor" ></textarea>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <div class="layui-input-block" style="margin-left: 128px">
+                            <button class="layui-btn  layui-btn-normal" lay-submit="" lay-filter="demo1">发送</button>
+                            <button type="reset" class="layui-btn layui-btn-primary">返回</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../../javascrips/public.js"></script>
+<script>
+    layui.use([ 'layer','form','element','layedit'], function(){
+        var form = layui.form, layer = layui.layer,$ = layui.jquery,element = layui.element,layedit = layui.layedit;
+        //创建一个编辑器
+        var editIndex = layedit.build('LAY_demo_editor');
+
+        //自定义验证规则
+        form.verify({
+            title: function(value){
+                if(value.length < 5){
+                    return '标题至少得5个字符啊';
+                }
+            }
+            ,pass: [/(.+){6,12}$/, '密码必须6到12位']
+            ,content: function(value){
+                layedit.sync(editIndex);
+            }
+        });
+
+    });
+</script>
+</body>
+</html>

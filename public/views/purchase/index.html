@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>物资设备采购</title>
+    <link rel="stylesheet" href="../../stylesheets/reset.css">
+    <link rel="stylesheet" href="../../stylesheets/common.css">
+    <script src="../../javascrips/jquery-1.11.2.min.js"></script>
+</head>
+<body>
+    <header id="header"></header>
+    <div id="main" class="clearfix">
+        <div class="left fl" id="sliderbox">
+            <ul>
+                <li>
+                    <span class="selected">
+                        <i class="iconfont">&#xe618;</i>
+                        采购信息管理
+                    </span>
+                    <div style="display: block">
+                        <a  data-href="/views/purchase/purchaseManage.html" class="selected"><i class="iconfont">&#xe600;</i>采购员管理</a>
+                        <a  data-href="/views/purchase/LeadtimeSetting.html"><i class="iconfont">&#xe600;</i>采购提前期设置</a>
+                    </div>
+                </li>
+                <li>
+                    <span>
+                        <i class="iconfont">&#xe618;</i>
+                        采购流程定义管理
+                    </span>
+                    <div>
+                        <a  data-href="/views/purchase/purchaseProcess.html"><i class="iconfont">&#xe600;</i>采购流程定义</a>
+                    </div>
+                </li>
+                <li>
+                    <span>
+                        <i class="iconfont">&#xe618;</i>
+                        采购申请管理
+                    </span>
+                    <div>
+                        <a  data-href="/views/purchase/purchaseRequest.html"><i class="iconfont">&#xe600;</i>采购申请</a>
+                    </div>
+                </li>
+                <li>
+                    <span>
+                        <i class="iconfont">&#xe618;</i>
+                        采购审批管理
+                    </span>
+                    <div>
+                        <a  data-href="/views/purchase/purchaseApproval.html"><i class="iconfont">&#xe600;</i> 采购审批</a>
+                    </div>
+                </li>
+                <li>
+                    <span>
+                        <i class="iconfont">&#xe618;</i>
+                        供应商管理
+                    </span>
+                    <div>
+                        <a data-href="/views/purchase/supplier.html"><i class="iconfont">&#xe600;</i>供应商管理</a>
+                    </div>
+                </li>
+                <li>
+                    <span>
+                        <i class="iconfont">&#xe618;</i>
+                        统计分析
+                    </span>
+                    <div>
+                        <a  data-href="/views/purchase/analysis.html"><i class="iconfont">&#xe600;</i>采购计划分析</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="right fl">
+            <iframe id="iframbox" src="/views/purchase/purchaseManage.html" width="100%" frameborder="0" height="100%" ></iframe>
+        </div>
+    </div>
+    <script src="../../javascrips/common.js"></script>
+</body>
+</html>

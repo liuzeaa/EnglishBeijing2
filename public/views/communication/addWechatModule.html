@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../../stylesheets/reset.css">
+    <link rel="stylesheet" href="../../stylesheets/communication.css.css">
+    <link rel="stylesheet" href="../../javascrips/layui/css/layui.css">
+    <script src="../../javascrips/jquery-1.11.2.min.js"></script>
+    <script src="../../javascrips/layui/layui.js"></script>
+</head>
+<body>
+<div style="width:80%;margin:20px auto">
+    <form class="layui-form" action="">
+        <div class="layui-form-item">
+            <label class="layui-form-label">模板ID：</label>
+            <div class="layui-input-block">
+                <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">标题：</label>
+            <div class="layui-input-block">
+                <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">行业：</label>
+            <div class="layui-input-block">
+                <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">参数1标签：</label>
+            <div class="layui-input-block">
+                <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">参数1名称：</label>
+            <div class="layui-input-block">
+                <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">参数2标签：</label>
+            <div class="layui-input-block">
+                <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">参数2名称：</label>
+            <div class="layui-input-block">
+                <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">参数3标签：</label>
+            <div class="layui-input-block">
+                <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">参数3名称：</label>
+            <div class="layui-input-block">
+                <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-input-block">
+                <button class="layui-btn  layui-btn-normal" lay-submit="" lay-filter="demo1">保存</button>
+                <button type="reset" class="layui-btn layui-btn-primary" id="cancel">取消</button>
+            </div>
+        </div>
+    </form>
+</div>
+<script src="../../javascrips/public.js"></script>
+<script>
+    layui.use(['form','element','laydate'], function(){
+        var form = layui.form,layer = layui.layer,$ = layui.jquery,laydate = layui.laydate,element = layui.element;
+        //日期
+        laydate.render({
+            elem: '#date'
+        });
+    });
+    $('#add').on('click',function(){
+        layer.open({
+            type: 2,
+            title: '添加微信模板',
+            shadeClose: true,
+            shade: 0.6,
+            area: ['700px', '80%'],
+            content: 'addWechatModule.html' //iframe的url
+        });
+    })
+</script>
+</body>
+</html>

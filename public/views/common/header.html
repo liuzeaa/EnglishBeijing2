@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div class="clearfix">
+        <span class="logo fl">AKMI校园服务一站式管理平台</span>
+        <nav class="fl">
+            <ul>
+                <li class="selected"><a href="/views/purchase/index.html" >物资设备采购</a></li>
+                <li><a href="/views/communication/index.html">统一通信平台</a></li>
+                <li><a href="/views/equipment/index.html">设备材料管理</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="subTitle">物资设备采购</div>
+    <script>
+        $(function(){
+            navSelected();
+        })
+        function navSelected(){
+            
+            var herf = window.location.href;
+            if(herf.indexOf('purchase')>-1){
+				$('nav ul li').removeClass('selected');
+                $('nav ul li:eq(0)').addClass('selected');
+                $('.subTitle').html('物资设备采购');
+            }
+            if(herf.indexOf('communication')>-1){
+				$('nav ul li').removeClass('selected');
+                $('nav ul li:eq(1)').addClass('selected');
+                $('.subTitle').html('统一通信平台');
+            }
+            if(herf.indexOf('equipment')>-1){
+			$('nav ul li').removeClass('selected');
+                $('nav ul li:eq(2)').addClass('selected');
+                $('.subTitle').html('设备材料管理');
+            }
+        }
+    </script>
+</body>
+</html>

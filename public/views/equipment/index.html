@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>设备材料管理</title>
+    <link rel="stylesheet" href="../../stylesheets/reset.css">
+    <link rel="stylesheet" href="../../stylesheets/common.css">
+    <script src="../../javascrips/jquery-1.11.2.min.js"></script>
+</head>
+<body>
+<header id="header"></header>
+<div id="main" class="clearfix">
+    <div class="left fl" id="sliderbox">
+        <ul>
+            <li>
+                    <span class="selected">
+                        <i class="iconfont">&#xe618;</i>
+                        设备材料信息管理
+                    </span>
+                <div style="display: block">
+                    <a  data-href="insertEquip.html" class="selected"><i class="iconfont">&#xe600;</i>采购入库</a>
+                    <a  data-href="useEquip.html"><i class="iconfont">&#xe600;</i>领用出库</a>
+                    <a  data-href="transferEquip.html"><i class="iconfont">&#xe600;</i>设备转移</a>
+                    <a  data-href="repairEquip.html"><i class="iconfont">&#xe600;</i>设备维修</a>
+                    <a  data-href="scrapeEquip.html"><i class="iconfont">&#xe600;</i>设备报废</a>
+                </div>
+            </li>
+            <li>
+                    <span>
+                        <i class="iconfont">&#xe618;</i>
+                        设备材料自定义属性管理
+                    </span>
+                <div>
+                    <a  data-href="propretySetting.html"><i class="iconfont">&#xe600;</i>设备材料自定义属性设置</a>
+                </div>
+            </li>
+            <li>
+                    <span>
+                        <i class="iconfont">&#xe618;</i>
+                        材料盘点管理
+                    </span>
+                <div>
+                    <a  data-href="MaterialInventory.html"><i class="iconfont">&#xe600;</i>材料盘点</a>
+                </div>
+            </li>
+            <li>
+                    <span>
+                        <i class="iconfont">&#xe618;</i>
+                        设备折旧管理
+                    </span>
+                <div>
+                    <a  data-href="depreciationAnalysis.html"><i class="iconfont">&#xe600;</i> 设备折旧统计</a>
+                </div>
+            </li>
+            <li>
+                    <span>
+                        <i class="iconfont">&#xe618;</i>
+                        设备月报管理
+                    </span>
+                <div>
+                    <a data-href="monthly.html"><i class="iconfont">&#xe600;</i>设备材料月报</a>
+                </div>
+            </li>
+            <li>
+                    <span>
+                        <i class="iconfont">&#xe618;</i>
+                        设备材料综合管理
+                    </span>
+                <div>
+                    <a  data-href="generalQuery.html"><i class="iconfont">&#xe600;</i>设备材料综合查询</a>
+                </div>
+            </li>
+            <li>
+                    <span>
+                        <i class="iconfont">&#xe618;</i>
+                        低值易耗品管理
+                    </span>
+                <div>
+                    <a  data-href="insertEquip.html"><i class="iconfont">&#xe600;</i>采购入库</a>
+                    <a  data-href="useEquip.html"><i class="iconfont">&#xe600;</i>领用出库</a>
+                    <a  data-href="Stocktaking.html"><i class="iconfont">&#xe600;</i>库存盘点</a>
+                    <a  data-href="scrapeEquip.html"><i class="iconfont">&#xe600;</i>库存报废</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="right fl">
+        <iframe id="iframbox" src="insertEquip.html" width="100%" frameborder="0" height="100%" ></iframe>
+    </div>
+</div>
+<script src="../../javascrips/common.js"></script>
+</body>
+</html>

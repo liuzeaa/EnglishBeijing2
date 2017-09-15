@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../../stylesheets/reset.css">
+    <link rel="stylesheet" href="../../stylesheets/equipment.css">
+    <link rel="stylesheet" href="../../javascrips/layui/css/layui.css">
+    <script src="../../javascrips/layui/layui.js"></script>
+</head>
+<body>
+<div style="width:80%;margin:20px auto">
+    <form class="layui-form" action="">
+        <div class="layui-form-item">
+            <label class="layui-form-label">设备编号：</label>
+            <div class="layui-input-block">
+                <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="2016061400004" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">设备名称：</label>
+            <div class="layui-input-block">
+                <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="多媒体投影仪" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">设备类型：</label>
+            <div class="layui-input-block">
+                <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="ND342DS" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">时间：</label>
+            <div class="layui-input-block">
+                <input type="text" name="date" id="date" lay-verify="date" placeholder="2017-09-14" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">状态：</label>
+            <div class="layui-input-block">
+                <select name="" id="">
+                    <option value="">新增</option>
+                    <option value="">修改</option>
+                    <option value="">转移</option>
+                    <option value="">借用</option>
+                    <option value="">报废</option>
+                    <option value="">报废</option>
+                </select>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">单位:</label>
+            <div class="layui-input-block">
+                <select name="" id=""></select>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">负责人：</label>
+            <div class="layui-input-block">
+                <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">设备详情：</label>
+            <div class="layui-input-block">
+                <textarea placeholder="" class="layui-textarea"></textarea>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">备注：</label>
+            <div class="layui-input-block">
+                <textarea placeholder="" class="layui-textarea"></textarea>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-input-block">
+                <button class="layui-btn  layui-btn-normal" lay-submit="" lay-filter="demo1">保存</button>
+                <button type="reset" class="layui-btn layui-btn-primary" id="cancel">取消</button>
+            </div>
+        </div>
+    </form>
+</div>
+<script src="../../javascrips/public.js"></script>
+<script>
+    layui.use(['form','element','laydate'], function(){
+        var form = layui.form,$ = layui.jquery,laydate = layui.laydate,element = layui.element;
+        //日期
+        laydate.render({
+            elem: '#date'
+        });
+    });
+</script>
+</body>
+</html>

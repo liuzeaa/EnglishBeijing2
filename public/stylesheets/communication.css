@@ -1,0 +1,18 @@
+.tree{
+    position:relative;min-height: 100px;
+}
+.tree_left{
+    width:200px;left:0px;position:absolute;border:1px solid #ccc;border:1px solid #ccc;
+}
+.tree_right{
+    width:100%;padding-left:210px;box-sizing: border-box;
+}
+.tree_left h1{
+    height:40px;background: #FDFDFD;color: #1E9FFF;line-height: 40px;padding:0px 10px;
+}
+.default{
+    color:#1E9FFF;
+}
+.red{
+    color:red;
+}

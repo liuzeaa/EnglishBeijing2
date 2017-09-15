@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../../stylesheets/reset.css">
+    <link rel="stylesheet" href="../../stylesheets/purchase.css">
+    <link rel="stylesheet" href="../../javascrips/layui/css/layui.css">
+    <script src="../../javascrips/jquery-1.11.2.min.js"></script>
+    <script src="../../javascrips/layui/layui.js"></script>
+    <style>
+        .layui-form-label{width:98px;}
+    </style>
+</head>
+<body>
+    <div>
+        <div class="layui-tab layui-tab-card">
+            <ul class="layui-tab-title">
+                <li class="layui-this">采购提前期设置</li>
+            </ul>
+            <div class="layui-tab-content">
+                <div class="layui-tab-item layui-show">
+                    <form class="layui-form" action="">
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">采购设备类型：</label>
+                            <div class="layui-input-inline">
+                                <select name="interest" lay-filter="aihao">
+
+                                </select>
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">确认订单时间：</label>
+                            <div class="layui-input-inline">
+                                <input type="text" name="date" id="date" lay-verify="date" placeholder="2017-09-14" autocomplete="off" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">材料准备时间：</label>
+                            <div class="layui-input-inline">
+                                <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="5" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-form-item layui-form-text">
+                            <label class="layui-form-label">备注:</label>
+                            <div class="layui-input-inline">
+                                <textarea placeholder="采购提前期设置" class="layui-textarea" style="width:500px"></textarea>
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <div class="layui-input-block" style="margin-left: 128px">
+                                <button class="layui-btn  layui-btn-normal" lay-submit="" lay-filter="demo1">保存</button>
+                                <button type="reset" class="layui-btn layui-btn-primary">返回</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        layui.use(['form','element','laydate'], function(){
+            var form = layui.form,laydate = layui.laydate,$ = layui.jquery,element = layui.element;
+            //日期
+            laydate.render({
+                elem: '#date'
+            });
+        });
+    </script>
+</body>
+</html>

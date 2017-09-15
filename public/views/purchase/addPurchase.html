@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../../stylesheets/reset.css">
+    <link rel="stylesheet" href="../../stylesheets/purchase.css">
+    <link rel="stylesheet" href="../../javascrips/layui/css/layui.css">
+    <script src="../../javascrips/layui/layui.js"></script>
+</head>
+<body>
+<div style="width:80%;margin:20px auto">
+        <form class="layui-form" action="">
+            <div class="layui-form-item">
+                <label class="layui-form-label">姓名：</label>
+                <div class="layui-input-block">
+                    <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">性别：</label>
+                <div class="layui-input-block">
+                    <input type="radio" name="sex" value="男" title="男" checked="">
+                    <input type="radio" name="sex" value="女" title="女">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">出生日期：</label>
+                <div class="layui-input-block">
+                    <input type="text" name="date" id="date" lay-verify="date" placeholder="2017-09-14" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">地区：</label>
+                <div class="layui-input-block">
+                    <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">民族：</label>
+                <div class="layui-input-block">
+                    <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">单位:</label>
+                <div class="layui-input-block">
+                    <select name="" id=""></select>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">职务：</label>
+                <div class="layui-input-block">
+                    <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">身份证号：</label>
+                <div class="layui-input-block">
+                    <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">政治面貌:</label>
+                <div class="layui-input-block">
+                    <select name="" >
+                        <option value="">群众</option>
+                        <option value="">党员</option>
+                        <option value="">团员</option>
+                    </select>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <div class="layui-input-block">
+                    <button class="layui-btn  layui-btn-normal" lay-submit="" lay-filter="demo1">保存</button>
+                    <button type="reset" class="layui-btn layui-btn-primary" id="cancel">取消</button>
+                </div>
+            </div>
+        </form>
+</div>
+<script src="../../javascrips/public.js"></script>
+<script>
+    layui.use(['form','element','laydate'], function(){
+        var form = layui.form,layer = layui.layer,$ = layui.jquery,laydate = layui.laydate,element = layui.element;
+        //日期
+        laydate.render({
+            elem: '#date'
+        });
+    });
+</script>
+</body>
+</html>

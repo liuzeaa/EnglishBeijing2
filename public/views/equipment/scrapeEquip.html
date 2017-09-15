@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../../stylesheets/reset.css">
+    <link rel="stylesheet" href="../../stylesheets/equipment.css">
+    <link rel="stylesheet" href="../../javascrips/layui/css/layui.css">
+    <script src="../../javascrips/layui/layui.js"></script>
+    <style>
+        .layui-form-label{width:98px;}
+    </style>
+</head>
+<body>
+<div>
+    <div class="layui-tab layui-tab-card">
+        <ul class="layui-tab-title">
+            <li class="layui-this">设备信息管理</li>
+            <li>设备报废添加</li>
+        </ul>
+        <div class="layui-tab-content">
+            <div class="layui-tab-item layui-show">
+                <form class="layui-form" action="">
+                    <div class="layui-form-item">
+                        <div class="layui-inline">
+                            <label class="layui-form-label">类型：</label>
+                            <div class="layui-input-inline">
+                                <select name="quiz">
+                                    <option value=""></option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="layui-inline">
+                            <label class="layui-form-label">描述：</label>
+                            <div class="layui-input-inline">
+                                <input type="text" name="email" lay-verify="email" autocomplete="off" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-inline">
+                            <div class="layui-input-inline">
+                                <button class="layui-btn layui-btn-normal">查询</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <div class="layui-form">
+                    <table class="layui-table">
+                        <thead>
+                        <tr>
+                            <th>设备编号</th>
+                            <th>设备名称</th>
+                            <th>设备类型</th>
+                            <th>入库日期</th>
+                            <th>状态</th>
+                            <th>申请单位</th>
+                            <th>负责人</th>
+                            <th>设备详情</th>
+                            <th>备注</th>
+                            <th>操作</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td><a class="default" >2016061400004</a></td>
+                            <td>多媒体投影仪</td>
+                            <td>ND342DS</td>
+                            <td>1985-02-08</td>
+                            <td>新增</td>
+                            <td>学生公寓服务中心</td>
+                            <td>王杰</td>
+                            <td></td>
+                            <td>合格</td>
+                            <td>
+                                <a href="javascript:;" class="default edit">修改</a>
+                                <a href="javascript:;" class="default">删除</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><a class="default" >2016042102</a></td>
+                            <td>惠普打印机</td>
+                            <td>XSER570</td>
+                            <td>2016-06-01</td>
+                            <td>新增</td>
+                            <td>文学院</td>
+                            <td>王杰</td>
+                            <td></td>
+                            <td>合格</td>
+                            <td>
+                                <a href="javascript:;" class="default edit">修改</a>
+                                <a href="javascript:;" class="default">删除</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><a class="default">2016061400004</a></td>
+                            <td>多媒体投影仪</td>
+                            <td>ND342DS</td>
+                            <td>1985-02-08</td>
+                            <td>新增</td>
+                            <td>学生公寓服务中心</td>
+                            <td>王杰</td>
+                            <td></td>
+                            <td>合格</td>
+                            <td>
+                                <a href="javascript:;" class="default edit">修改</a>
+                                <a href="javascript:;" class="default">删除</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><a class="default" >2016061400004</a></td>
+                            <td>多媒体投影仪</td>
+                            <td>ND342DS</td>
+                            <td>1985-02-08</td>
+                            <td>新增</td>
+                            <td>学生公寓服务中心</td>
+                            <td>王杰</td>
+                            <td></td>
+                            <td>转移</td>
+                            <td>
+                                <a href="javascript:;" class="default edit">修改</a>
+                                <a href="javascript:;" class="default">删除</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><a class="default" >2016061400004</a></td>
+                            <td>多媒体投影仪</td>
+                            <td>ND342DS</td>
+                            <td>1985-02-08</td>
+                            <td>新增</td>
+                            <td>学生公寓服务中心</td>
+                            <td>王杰</td>
+                            <td></td>
+                            <td>归还</td>
+                            <td>
+                                <a href="javascript:;" class="default edit">修改</a>
+                                <a href="javascript:;" class="default">删除</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><a class="default" >2016061400004</a></td>
+                            <td>多媒体投影仪</td>
+                            <td>ND342DS</td>
+                            <td>1985-02-08</td>
+                            <td>新增</td>
+                            <td>学生公寓服务中心</td>
+                            <td>王杰</td>
+                            <td></td>
+                            <td>借用</td>
+                            <td>
+                                <a href="javascript:;" class="default edit">修改</a>
+                                <a href="javascript:;" class="default">删除</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><a class="default" >2016061400004</a></td>
+                            <td>多媒体投影仪</td>
+                            <td>ND342DS</td>
+                            <td>1985-02-08</td>
+                            <td>新增</td>
+                            <td>学生公寓服务中心</td>
+                            <td>王杰</td>
+                            <td></td>
+                            <td>保修</td>
+                            <td>
+                                <a href="javascript:;" class="default edit">修改</a>
+                                <a href="javascript:;" class="default">删除</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><a class="default" >2016061400004</a></td>
+                            <td>多媒体投影仪</td>
+                            <td>ND342DS</td>
+                            <td>1985-02-08</td>
+                            <td>报废</td>
+                            <td>学生公寓服务中心</td>
+                            <td>王杰</td>
+                            <td></td>
+                            <td>合格</td>
+                            <td>
+                                <a href="javascript:;" class="default edit">修改</a>
+                                <a href="javascript:;" class="default">删除</a>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="layui-tab-item">
+                <form class="layui-form" action="">
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">设备编号：</label>
+                        <div class="layui-input-inline">
+                            <input type="text" name="title" lay-verify="title" autocomplete="off" value="2016061400004" class="layui-input">
+                        </div>
+                        <div class="layui-input-inline">
+                            <span class="red">*</span>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">设备名称：</label>
+                        <div class="layui-input-inline">
+                            <input type="text" name="title" lay-verify="title" autocomplete="off" value="多媒体投影仪" class="layui-input">
+                        </div>
+                        <div class="layui-input-inline">
+                            <span class="red">*</span>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">出库类型：</label>
+                        <div class="layui-input-inline">
+                            <select name="" id="">
+                                <option value="">电器</option>
+                            </select>
+                        </div>
+                        <div class="layui-input-inline">
+                            <span class="red">*</span>
+                        </div>
+                    </div>
+                    <div class="layui-form-item layui-form-text">
+                        <label class="layui-form-label">出库时间:</label>
+                        <div class="layui-input-inline">
+                            <input type="text" name="date" id="date" lay-verify="date" placeholder="2017-09-14" autocomplete="off" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">状态：</label>
+                        <div class="layui-input-inline">
+                            <select name="" id="">
+                                <option value="">报废</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">申请单位：</label>
+                        <div class="layui-input-inline">
+                            <input type="text" name="title" lay-verify="title" autocomplete="off" value="后勤集团" class="layui-input">
+                        </div>
+                        <div class="layui-input-inline">
+                            <button class="layui-btn layui-btn-normal">
+                                <i class="layui-icon">&#xe615;</i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">领用人：</label>
+                        <div class="layui-input-inline">
+                            <input type="text" name="title" lay-verify="title" autocomplete="off" value="王杰" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">设备规格：</label>
+                        <div class="layui-input-inline">
+                            <select name="" id="">
+                                <option value=""></option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">设备详情：</label>
+                        <div class="layui-input-inline">
+                            <input type="text" name="title" lay-verify="title" autocomplete="off" value="已不能用了" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <div class="layui-input-block" style="margin-left: 128px">
+                            <button class="layui-btn  layui-btn-normal" lay-submit="" lay-filter="demo1">保存</button>
+                            <button type="reset" class="layui-btn layui-btn-primary">返回</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    layui.use(['form','element','laydate','layer'], function(){
+        var form = layui.form,layer = layui.layer,$ = layui.jquery,element = layui.element,laydate = layui.laydate;
+        //日期
+        laydate.render({
+            elem: '#date'
+        });
+        $('.edit').on('click',function(){
+            layer.open({
+                type: 2,
+                title: '编辑设备报废',
+                shadeClose: true,
+                shade: 0.6,
+                area: ['700px', '80%'],
+                content: 'editModel.html' //iframe的url
+            });
+        })
+    });
+
+</script>
+</body>
+</html>
